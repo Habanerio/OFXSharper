@@ -1,0 +1,48 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <AssemblyTitle>OFXSharper</AssemblyTitle>
+        <AssemblyName>Habanerio.OFXSharper</AssemblyName>
+        <RootNamespace>Habanerio.OFXSharper</RootNamespace>
+
+        <Author>Habaner.io, jhollingworth</Author>
+        <Company>Habaner.io</Company>
+        <Description>.Net Standard version of James Hollingworth's popular OFXSharp Library (https://github.com/jhollingworth/OFXSharp)</Description>
+
+        <PackageId>Habanerio.OFXSharper</PackageId>
+
+        <AssemblyVersion>1.0.0</AssemblyVersion>
+        <FileVersion>1.0.0</FileVersion>
+        <InformationalVersion>1.0.0</InformationalVersion>
+
+
+        <LicenseUrl>http://opensource.org/licenses/MIT</LicenseUrl>
+        <ProjectUrl>https://github.com/Habanerio/OFXSharper</ProjectUrl>
+
+        <Tags>OFX, OFX Parser, OFXSharp</Tags>
+
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    </PropertyGroup>
+    <ItemGroup>
+        <Compile Update="Resources.Designer.cs">
+            <AutoGen>True</AutoGen>
+            <DesignTime>True</DesignTime>
+            <DependentUpon>Resources.resx</DependentUpon>
+        </Compile>
+    </ItemGroup>
+    <ItemGroup>
+        <EmbeddedResource Update="Resources.resx">
+            <Generator>ResXFileCodeGenerator</Generator>
+            <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+            <SubType>Designer</SubType>
+        </EmbeddedResource>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="SgmlReader.NetStandard" Version="1.8.14.1" />
+        <PackageReference Include="SonarAnalyzer.CSharp" Version="10.3.0.106239">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+    </ItemGroup>
+</Project>
